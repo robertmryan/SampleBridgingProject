@@ -8,9 +8,9 @@ The process to create this project was:
 
 1. Create blank iOS Objective-C app and called it `SampleBridgingProject`.
 
-2. Add Swift class, `Foo`, as a subclass of `NSObject`. When prompted, I chose to add the briding header.
+2. Add Swift class, `Foo`, as a subclass of `NSObject`. When prompted, I chose to add the bridging header.
 
-3. Add `SampleBridgingProject.pch` to project.
+3. Add a new `SampleBridgingProject.pch` to project.
 
 4. Add following `#import` to the `pch` file:
 
