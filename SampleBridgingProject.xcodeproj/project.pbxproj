@@ -13,6 +13,7 @@
 		83CC6F351DA7F5800032E26B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CC6F331DA7F5800032E26B /* Main.storyboard */; };
 		83CC6F371DA7F5800032E26B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CC6F361DA7F5800032E26B /* Assets.xcassets */; };
 		83CC6F3A1DA7F5800032E26B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CC6F381DA7F5800032E26B /* LaunchScreen.storyboard */; };
+		83CC6F451DA7F62D0032E26B /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC6F441DA7F62D0032E26B /* Foo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,10 @@
 		83CC6F361DA7F5800032E26B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83CC6F391DA7F5800032E26B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83CC6F3B1DA7F5800032E26B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83CC6F411DA7F5B00032E26B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		83CC6F431DA7F62D0032E26B /* SampleBridgingProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleBridgingProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		83CC6F441DA7F62D0032E26B /* Foo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foo.swift; sourceTree = "<group>"; };
+		83CC6F461DA7F6890032E26B /* SampleBridgingProject.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleBridgingProject.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,7 @@
 		83CC6F1E1DA7F5800032E26B = {
 			isa = PBXGroup;
 			children = (
+				83CC6F411DA7F5B00032E26B /* README.md */,
 				83CC6F291DA7F5800032E26B /* SampleBridgingProject */,
 				83CC6F281DA7F5800032E26B /* Products */,
 			);
@@ -62,11 +68,14 @@
 				83CC6F2E1DA7F5800032E26B /* AppDelegate.m */,
 				83CC6F301DA7F5800032E26B /* ViewController.h */,
 				83CC6F311DA7F5800032E26B /* ViewController.m */,
+				83CC6F461DA7F6890032E26B /* SampleBridgingProject.pch */,
+				83CC6F441DA7F62D0032E26B /* Foo.swift */,
 				83CC6F331DA7F5800032E26B /* Main.storyboard */,
 				83CC6F361DA7F5800032E26B /* Assets.xcassets */,
 				83CC6F381DA7F5800032E26B /* LaunchScreen.storyboard */,
 				83CC6F3B1DA7F5800032E26B /* Info.plist */,
 				83CC6F2A1DA7F5800032E26B /* Supporting Files */,
+				83CC6F431DA7F62D0032E26B /* SampleBridgingProject-Bridging-Header.h */,
 			);
 			path = SampleBridgingProject;
 			sourceTree = "<group>";
@@ -111,6 +120,7 @@
 					83CC6F261DA7F5800032E26B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = UZAPXQTVQ4;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -153,6 +163,7 @@
 			files = (
 				83CC6F321DA7F5800032E26B /* ViewController.m in Sources */,
 				83CC6F2F1DA7F5800032E26B /* AppDelegate.m in Sources */,
+				83CC6F451DA7F62D0032E26B /* Foo.swift in Sources */,
 				83CC6F2C1DA7F5800032E26B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,11 +284,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = UZAPXQTVQ4;
+				GCC_PREFIX_HEADER = SampleBridgingProject/SampleBridgingProject.pch;
 				INFOPLIST_FILE = SampleBridgingProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.robertmryan.SampleBridgingProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SampleBridgingProject/SampleBridgingProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -285,11 +301,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = UZAPXQTVQ4;
+				GCC_PREFIX_HEADER = SampleBridgingProject/SampleBridgingProject.pch;
 				INFOPLIST_FILE = SampleBridgingProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.robertmryan.SampleBridgingProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SampleBridgingProject/SampleBridgingProject-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -312,6 +332,7 @@
 				83CC6F401DA7F5800032E26B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
